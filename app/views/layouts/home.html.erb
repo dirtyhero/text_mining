@@ -39,24 +39,10 @@
   </head>
 
 <body>
-  <!-- <div class="w-nav navigation" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
-    <div class="w-container">
-      <a class="w-nav-brand brand-link" href="/">
-        <div class="logo-text">TextMining</div>
-      </a>
-      <nav class="w-nav-menu nav-menu" role="navigation"><a class="w-nav-link nav-link" href="#pricing">Pricing is Free</a><a class="w-nav-link nav-link" href="#">Sign Up</a>
-      </nav>
-      <div class="w-nav-button nav-link menu">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-    </div>
-  </div> -->
   <div class="navbar navbar-default navbar-static-top" style="margin-bottom: 0px;">
     <div class="container">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        
       </button>
       <a class="navbar-brand" href="#">TextMining</a>
       <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -81,7 +67,11 @@
       <div class="w-row">
         <div class="w-col w-col-6" style="float: left;">
           <h1 class="main-heading" style="margin-top: 70px;">Easy and Free to use <br>TextMining tool</h1>
-          <p class="main-subtitle" style="margin-bottom: 40px;">You can easily be a text mining .</p><a class="button" href="#">Sign Up</a><a class="button hollow" href="#">Learn More</a>
+          <p class="main-subtitle" style="margin-bottom: 40px;">You can easily be a text mining .</p>
+          <% unless user_signed_in? %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'button'  %> 
+            <%= link_to "Login", new_user_session_path, :class => 'button hollow'  %>
+          <% end -%>
         </div>
         <div class="w-col w-col-6"><img class="main-image" src="images/Metric-screenshot5.png" data-ix="fade-in-on-load">
         </div>
@@ -99,12 +89,12 @@
             <div class="title">Designer at Temona Labs</div>
           </div>
           <div class="w-slide testimony-slide">
-            <p class="testimony-text">“I like to be a free spirit. Some don’t like that, but that’s the way I am.”</p><img class="person" src="images/ota2.jpg" width="100">
+            <p class="testimony-text" style="margin-top: 60px;">“I like to be a free spirit. Some don’t like that, but that’s the way I am.”</p><img class="person" src="images/ota2.jpg" width="100">
             <div class="name">Ota Yoshihiro</div>
             <div class="title">CEO at GoodNight</div>
           </div>
           <div class="w-slide testimony-slide">
-            <p class="testimony-text">“I don’t dream at night, I dream all day. I dream for a living.”</p><img class="person" src="images/taka.jpg" width="100">
+            <p class="testimony-text" style="margin-top: 60px;">“I don’t dream at night, I dream all day. I dream for a living.”</p><img class="person" src="images/taka.jpg" width="100">
             <div class="name">Kazuki Takahashi</div>
             <div class="title">CTO at DirtyHero</div>
           </div>
