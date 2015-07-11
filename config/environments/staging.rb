@@ -86,4 +86,6 @@ Rails.application.configure do
     Devise::PasswordsController.layout "devise"        
   end
 
+  config.secret_key = '756140bb347407ee25c4cafd56eabcalskdjflkj91445c77af045f4b2621a29ca1f6efb5dda80e2f78ffc60c0edc7cebcc7d6b08d8f106b743e40018a097db0bc59e6ffd7'
+
 end
