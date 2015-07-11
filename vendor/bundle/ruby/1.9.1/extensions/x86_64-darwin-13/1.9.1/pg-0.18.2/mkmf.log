@@ -1,0 +1,170 @@
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1  -Wl,-rpath,/Library/PostgreSQL/8.4/lib -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+ld: -rpath can only be used when targeting Mac OS X 10.5 or later
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+find_header: checking for libpq-fe.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c -o conftest.i"
+couldn't understand kern.osversion `14.3.0'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq-fe.h>
+/* end */
+
+--------------------
+
+find_header: checking for libpq/libpq-fs.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c -o conftest.i"
+couldn't understand kern.osversion `14.3.0'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq/libpq-fs.h>
+/* end */
+
+--------------------
+
+find_header: checking for pg_config_manual.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c -o conftest.i"
+couldn't understand kern.osversion `14.3.0'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <pg_config_manual.h>
+/* end */
+
+--------------------
+
+have_library: checking for PQconnectdb() in -lpq... -------------------- no
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+ld: warning: ignoring file /Library/PostgreSQL/8.4/lib/libpq.dylib, missing required architecture x86_64 in file /Library/PostgreSQL/8.4/lib/libpq.dylib (2 slices)
+Undefined symbols for architecture x86_64:
+  "_PQconnectdb", referenced from:
+      _t in ccx9k365.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq-fe.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))PQconnectdb; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:7: error: too few arguments to function ‘PQconnectdb’
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq-fe.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { PQconnectdb(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for PQconnectdb() in -llibpq... -------------------- no
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1 -llibpq  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+ld: library not found for -llibpq
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq-fe.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))PQconnectdb; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1 -llibpq  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:7: error: too few arguments to function ‘PQconnectdb’
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq-fe.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { PQconnectdb(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for PQconnectdb() in -lms/libpq... -------------------- no
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1 -lms/libpq  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+ld: library not found for -lms/libpq
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq-fe.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))PQconnectdb; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Library/PostgreSQL/8.4/include -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Library/PostgreSQL/8.4/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib     -lruby.1.9.1 -lms/libpq  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:7: error: too few arguments to function ‘PQconnectdb’
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libpq-fe.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { PQconnectdb(); return 0; }
+/* end */
+
+--------------------
+

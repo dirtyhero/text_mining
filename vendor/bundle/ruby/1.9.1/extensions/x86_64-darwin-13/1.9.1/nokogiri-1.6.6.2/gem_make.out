@@ -1,0 +1,219 @@
+/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/bin/ruby extconf.rb --use-system-libraries
+checking if the C compiler accepts ... yes
+checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
+Building nokogiri using system libraries.
+libxml2 version 2.9.2 or later is highly recommended, but proceeding anyway.
+checking for xmlParseDoc() in libxml/parser.h... yes
+checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
+checking for exsltFuncRegister() in libexslt/exslt.h... yes
+checking for xmlHasFeature()... yes
+checking for xmlFirstElementChild()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetValidStructuredErrors()... yes
+checking for xmlSchemaSetValidStructuredErrors()... yes
+checking for xmlSchemaSetParserStructuredErrors()... yes
+creating Makefile
+
+make  clean
+
+make
+compiling html_document.c
+couldn't understand kern.osversion `14.3.0'
+compiling html_element_description.c
+couldn't understand kern.osversion `14.3.0'
+html_element_description.c: In function ‘get_description’:
+html_element_description.c:252: warning: cast discards qualifiers from pointer target type
+compiling html_entity_lookup.c
+couldn't understand kern.osversion `14.3.0'
+html_entity_lookup.c: In function ‘get’:
+html_entity_lookup.c:9: warning: unused parameter ‘self’
+compiling html_sax_parser_context.c
+couldn't understand kern.osversion `14.3.0'
+compiling html_sax_push_parser.c
+couldn't understand kern.osversion `14.3.0'
+compiling nokogiri.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_attr.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_attribute_decl.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_cdata.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_comment.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_document.c
+couldn't understand kern.osversion `14.3.0'
+xml_document.c: In function ‘dealloc_node_i’:
+xml_document.c:3: warning: unused parameter ‘key’
+xml_document.c: In function ‘set_encoding’:
+xml_document.c:182: warning: cast discards qualifiers from pointer target type
+xml_document.c: In function ‘canonicalize’:
+xml_document.c:537: warning: cast discards qualifiers from pointer target type
+xml_document.c: In function ‘Nokogiri_wrap_xml_document’:
+xml_document.c:601: warning: passing argument 1 of ‘st_init_numtable_with_size’ with different width due to prototype
+compiling xml_document_fragment.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_dtd.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_element_content.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_element_decl.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_encoding_handler.c
+couldn't understand kern.osversion `14.3.0'
+xml_encoding_handler.c: In function ‘delete’:
+xml_encoding_handler.c:24: warning: unused parameter ‘klass’
+xml_encoding_handler.c: In function ‘alias’:
+xml_encoding_handler.c:36: warning: unused parameter ‘klass’
+compiling xml_entity_decl.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_entity_reference.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_io.c
+couldn't understand kern.osversion `14.3.0'
+xml_io.c: In function ‘io_read_callback’:
+xml_io.c:20: warning: passing argument 4 of ‘rb_rescue’ with different width due to prototype
+xml_io.c: In function ‘io_write_callback’:
+xml_io.c:46: warning: passing argument 4 of ‘rb_rescue’ with different width due to prototype
+xml_io.c: In function ‘io_close_callback’:
+xml_io.c:53: warning: unused parameter ‘ctx’
+compiling xml_libxml2_hacks.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_namespace.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_node.c
+couldn't understand kern.osversion `14.3.0'
+xml_node.c: In function ‘reparent_node_with’:
+xml_node.c:168: warning: enumeration value ‘XML_ATTRIBUTE_NODE’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_DOCUMENT_NODE’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_DOCUMENT_FRAG_NODE’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_HTML_DOCUMENT_NODE’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch
+xml_node.c:168: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_ATTRIBUTE_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_DOCUMENT_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_DOCUMENT_TYPE_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_DOCUMENT_FRAG_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_HTML_DOCUMENT_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch
+xml_node.c:186: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_ELEMENT_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_ATTRIBUTE_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_CDATA_SECTION_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_PI_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_COMMENT_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_DOCUMENT_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_DOCUMENT_TYPE_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_DOCUMENT_FRAG_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_HTML_DOCUMENT_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch
+xml_node.c:197: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_CDATA_SECTION_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_ENTITY_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_PI_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_COMMENT_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_DOCUMENT_TYPE_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_NOTATION_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_DTD_NODE’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_ELEMENT_DECL’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_ATTRIBUTE_DECL’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_ENTITY_DECL’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch
+xml_node.c:165: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch
+compiling xml_node_set.c
+couldn't understand kern.osversion `14.3.0'
+xml_node_set.c: In function ‘dealloc_namespace’:
+xml_node_set.c:9: warning: cast discards qualifiers from pointer target type
+xml_node_set.c:11: warning: cast discards qualifiers from pointer target type
+xml_node_set.c: In function ‘deallocate’:
+xml_node_set.c:52: warning: passing argument 3 of ‘st_foreach’ with different width due to prototype
+xml_node_set.c: In function ‘allocate’:
+xml_node_set.c:63: warning: unused parameter ‘klass’
+xml_node_set.c: In function ‘to_array’:
+xml_node_set.c:357: warning: unused parameter ‘rb_node’
+compiling xml_processing_instruction.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_reader.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_relax_ng.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_sax_parser.c
+couldn't understand kern.osversion `14.3.0'
+xml_sax_parser.c: In function ‘start_element’:
+xml_sax_parser.c:69: warning: passing argument 1 of ‘rb_ary_new3’ with different width due to prototype
+xml_sax_parser.c: In function ‘attributes_as_list’:
+xml_sax_parser.c:90: warning: unused parameter ‘self’
+xml_sax_parser.c: In function ‘start_element_ns’:
+xml_sax_parser.c:128: warning: unused parameter ‘nb_defaulted’
+compiling xml_sax_parser_context.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_sax_push_parser.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_schema.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_syntax_error.c
+couldn't understand kern.osversion `14.3.0'
+xml_syntax_error.c: In function ‘Nokogiri_error_silencer’:
+xml_syntax_error.c:10: warning: unused parameter ‘ctx’
+xml_syntax_error.c:10: warning: unused parameter ‘error’
+xml_syntax_error.c: In function ‘Nokogiri_error_raise’:
+xml_syntax_error.c:14: warning: unused parameter ‘ctx’
+compiling xml_text.c
+couldn't understand kern.osversion `14.3.0'
+compiling xml_xpath_context.c
+couldn't understand kern.osversion `14.3.0'
+xml_xpath_context.c: In function ‘lookup’:
+xml_xpath_context.c:165: warning: unused parameter ‘ns_uri’
+xml_xpath_context.c: In function ‘xpath_generic_exception_handler’:
+xml_xpath_context.c:175: warning: unused parameter ‘ctx’
+compiling xslt_stylesheet.c
+couldn't understand kern.osversion `14.3.0'
+xslt_stylesheet.c: In function ‘parse_stylesheet_doc’:
+xslt_stylesheet.c:72: warning: passing argument 2 of ‘rb_str_new’ with different width due to prototype
+xslt_stylesheet.c:64: warning: unused parameter ‘klass’
+xslt_stylesheet.c: In function ‘swallow_superfluous_xml_errors’:
+xslt_stylesheet.c:112: warning: unused parameter ‘userdata’
+xslt_stylesheet.c:112: warning: unused parameter ‘error’
+xslt_stylesheet.c: In function ‘transform’:
+xslt_stylesheet.c:166: warning: passing argument 2 of ‘rb_str_new’ with different width due to prototype
+xslt_stylesheet.c: In function ‘initFunc’:
+xslt_stylesheet.c:212: warning: passing argument 2 of ‘rb_ary_entry’ with different width due to prototype
+xslt_stylesheet.c: In function ‘shutdownFunc’:
+xslt_stylesheet.c:226: warning: unused parameter ‘uri’
+xslt_stylesheet.c:226: warning: unused parameter ‘data’
+linking shared-object nokogiri/nokogiri.bundle
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+Cleaning files only used during build.
+rm -rf /Users/kazuki/project/github/text_mining/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/archives
+
+make  install
+/usr/bin/install -c -m 0755 nokogiri.bundle /Users/kazuki/project/github/text_mining/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ext/nokogiri/.gem.20150711-9155-1rm6j5b/nokogiri
+installing default nokogiri libraries

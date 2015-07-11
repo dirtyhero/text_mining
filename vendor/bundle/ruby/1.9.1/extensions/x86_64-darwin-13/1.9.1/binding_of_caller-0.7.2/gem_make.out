@@ -1,0 +1,20 @@
+/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/bin/ruby extconf.rb
+creating Makefile
+
+make  clean
+
+make
+compiling binding_of_caller.c
+couldn't understand kern.osversion `14.3.0'
+binding_of_caller.c: In function ‘binding_of_caller’:
+binding_of_caller.c:128: warning: ISO C90 forbids mixed declarations and code
+binding_of_caller.c:144: warning: ISO C90 forbids mixed declarations and code
+binding_of_caller.c: In function ‘frame_count’:
+binding_of_caller.c:179: warning: ISO C90 forbids mixed declarations and code
+linking shared-object binding_of_caller.bundle
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+
+make  install
+/usr/bin/install -c -m 0755 binding_of_caller.bundle /Users/kazuki/project/github/text_mining/vendor/bundle/ruby/1.9.1/gems/binding_of_caller-0.7.2/ext/binding_of_caller/.gem.20150711-9155-198ahfu
+installing default binding_of_caller libraries

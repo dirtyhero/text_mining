@@ -1,0 +1,33 @@
+namespace :load do
+  task :defaults do
+    # add rails to rvm_map_bins
+    set :rvm_map_bins, fetch(:rvm_map_bins, []).push(:rails)
+  end
+end
+
+namespace :rails do
+  desc "Interact with a remote rails console"
+  task console: ['deploy:set_rails_env'] do
+    on primary :app do |host|
+      test(:true) # initialize ssh_options on host
+
+      ssh_cmd_options    = []
+      rails_console_args = []
+
+      if host.ssh_options && host.ssh_options[:proxy]
+        template = host.ssh_options[:proxy].command_line_template
+        ssh_cmd_options << "-o ProxyCommand=\"#{template}\""
+      end
+
+      rails_console_args << '--sandbox' if ENV.key?('sandbox') || ENV.key?('s')
+
+      cmd = SSHKit::Command.new(:rails, "console #{fetch(:rails_env)} #{rails_console_args.join(' ')}", host: host)
+      SSHKit.config.output << cmd
+
+      user_host = [host.user, host.hostname].compact.join('@')
+      ssh_cmd = "ssh #{ssh_cmd_options.join(' ')} #{user_host} -p #{host.port || 22}"
+
+      exec(%Q(#{ssh_cmd} -t "cd #{current_path} && (#{cmd.environment_string} #{cmd})"))
+    end
+  end
+end

@@ -1,0 +1,374 @@
+package configuration for openssl
+cflags: 
+ldflags: 
+libs: -lssl -lcrypto -lz 
+
+have_var: checking for rb_trap_immediate in ruby.h,rubysig.h... -------------------- no
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc-4.2 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe    -c conftest.c"
+couldn't understand kern.osversion `14.3.0'
+In file included from conftest.c:4:
+/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward/rubysig.h:14:2: warning: #warning rubysig.h is obsolete
+conftest.c: In function ‘t’:
+conftest.c:8: error: ‘rb_trap_immediate’ undeclared (first use in this function)
+conftest.c:8: error: (Each undeclared identifier is reported only once
+conftest.c:8: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: #include <rubysig.h>
+5: 
+6: /*top*/
+7: int main() {return 0;}
+8: int t() { const volatile void *volatile p; p = &(&rb_trap_immediate)[0]; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- yes
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for ruby/thread.h... -------------------- no
+
+"gcc-4.2 -E -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe   conftest.c -o conftest.i"
+couldn't understand kern.osversion `14.3.0'
+conftest.c:3:25: error: ruby/thread.h: No such file or directory
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/thread.h>
+/* end */
+
+--------------------
+
+have_func: checking for inotify_init() in sys/inotify.h... -------------------- no
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c:3:25: error: sys/inotify.h: No such file or directory
+conftest.c: In function ‘t’:
+conftest.c:7: error: ‘inotify_init’ undeclared (first use in this function)
+conftest.c:7: error: (Each undeclared identifier is reported only once
+conftest.c:7: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/inotify.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))inotify_init; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c:3:25: error: sys/inotify.h: No such file or directory
+conftest.c: In function ‘t’:
+conftest.c:7: warning: implicit declaration of function ‘inotify_init’
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/inotify.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { inotify_init(); return 0; }
+/* end */
+
+--------------------
+
+have_macro: checking for __NR_inotify_init in sys/syscall.h... -------------------- no
+
+"gcc-4.2 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe    -c conftest.c"
+couldn't understand kern.osversion `14.3.0'
+conftest.c:6:3: error: #error 
+conftest.c:7: error: expected identifier or ‘(’ before ‘>>’ token
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/syscall.h>
+4: /*top*/
+5: #ifndef __NR_inotify_init
+6: # error
+7: >>>>>> __NR_inotify_init undefined <<<<<<
+8: #endif
+/* end */
+
+--------------------
+
+have_func: checking for writev() in sys/uio.h... -------------------- yes
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/uio.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))writev; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_fd_select()... -------------------- yes
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_fd_select; return 0; }
+/* end */
+
+--------------------
+
+have_type: checking for rb_fdset_t in ruby/intern.h... -------------------- yes
+
+"gcc-4.2 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe    -c conftest.c"
+couldn't understand kern.osversion `14.3.0'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/intern.h>
+4: 
+5: /*top*/
+6: typedef rb_fdset_t conftest_type;
+7: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_func: checking for rb_wait_for_single_fd()... -------------------- yes
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘rb_wait_for_single_fd’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: warning: implicit declaration of function ‘rb_wait_for_single_fd’
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rb_wait_for_single_fd(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_enable_interrupt()... -------------------- yes
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘rb_enable_interrupt’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_enable_interrupt; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: warning: implicit declaration of function ‘rb_enable_interrupt’
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rb_enable_interrupt(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_time_new()... -------------------- yes
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_time_new; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for sys/event.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe   conftest.c -o conftest.i"
+couldn't understand kern.osversion `14.3.0'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/event.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/queue.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe   conftest.c -o conftest.i"
+couldn't understand kern.osversion `14.3.0'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/queue.h>
+/* end */
+
+--------------------
+
+have_func: checking for clock_gettime()... -------------------- no
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘clock_gettime’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))clock_gettime; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: warning: implicit declaration of function ‘clock_gettime’
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+Undefined symbols for architecture x86_64:
+  "_clock_gettime", referenced from:
+      _t in ccuNMRKS.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { clock_gettime(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for gethrtime()... -------------------- no
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘gethrtime’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))gethrtime; return 0; }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1  -lssl -lcrypto -lz  -lpthread -ldl -lobjc "
+couldn't understand kern.osversion `14.3.0'
+conftest.c: In function ‘t’:
+conftest.c:5: warning: implicit declaration of function ‘gethrtime’
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+Undefined symbols for architecture x86_64:
+  "_gethrtime", referenced from:
+      _t in ccwR6AJ9.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { gethrtime(); return 0; }
+/* end */
+
+--------------------
+
+"g++ -o conftest -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/x86_64-darwin13.1.0 -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1/ruby/backward -I/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/include/ruby-1.9.1 -I. -I/Users/kazuki/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c  -L. -L/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/lib -L/Users/kazuki/.rvm/usr/lib -L. -L/usr/local/lib      -lssl -lcrypto -lz  -lruby.1.9.1 -lstdc++ -lpthread -ldl -lobjc "
+clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3:   #include <utility>
+4:   using namespace std;
+5:   int main(){ pair<const int,int> tuple = make_pair(1,2); }
+/* end */
+

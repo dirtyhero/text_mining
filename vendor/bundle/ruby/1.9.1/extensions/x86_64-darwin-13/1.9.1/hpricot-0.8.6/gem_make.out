@@ -1,0 +1,79 @@
+/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/bin/ruby extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+make  clean
+
+make
+compiling hpricot_css.c
+couldn't understand kern.osversion `14.3.0'
+hpricot_css.rl: In function ‘hpricot_css’:
+hpricot_css.rl:87: warning: field precision should have type ‘int’, but argument 3 has type ‘long int’
+hpricot_css.rl:87: warning: field precision should have type ‘int’, but argument 3 has type ‘long int’
+hpricot_css.c:3407: warning: comparison between pointer and integer
+hpricot_css.c:3407: warning: ‘eof’ is used uninitialized in this function
+hpricot_css.rl:96: note: ‘eof’ was declared here
+hpricot_css.rl:97: warning: ‘aps’ may be used uninitialized in this function
+compiling hpricot_scan.c
+couldn't understand kern.osversion `14.3.0'
+hpricot_scan.rl: In function ‘hpricot_scan’:
+hpricot_scan.rl:562: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:563: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:564: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:565: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:566: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:582: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:588: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:73: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:66: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:66: warning: implicit conversion shortens 64-bit value into a 32-bit value
+NONE:3: warning: implicit conversion shortens 64-bit value into a 32-bit value
+NONE:6: warning: implicit conversion shortens 64-bit value into a 32-bit value
+NONE:9: warning: implicit conversion shortens 64-bit value into a 32-bit value
+NONE:12: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:69: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:69: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:68: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:68: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:68: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:68: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:70: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:68: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:68: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:68: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:65: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:73: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:73: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:73: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:66: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:124: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:46: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:46: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:51: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:50: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:51: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:51: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:51: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:56: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:55: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:56: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:56: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:56: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:61: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:61: warning: ordered comparison of pointer with integer zero
+hpricot_common.rl:60: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_common.rl:61: warning: ordered comparison of pointer with integer zero
+hpricot_scan.rl:619: warning: ordered comparison of pointer with integer zero
+hpricot_scan.rl:637: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:652: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl: In function ‘make_hpricot_struct’:
+hpricot_scan.rl:803: warning: implicit conversion shortens 64-bit value into a 32-bit value
+hpricot_scan.rl:803: warning: ISO C90 forbids mixed declarations and code
+hpricot_scan.rl:809: warning: implicit conversion shortens 64-bit value into a 32-bit value
+linking shared-object hpricot_scan.bundle
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+
+make  install
+/usr/bin/install -c -m 0755 hpricot_scan.bundle /Users/kazuki/project/github/text_mining/vendor/bundle/ruby/1.9.1/gems/hpricot-0.8.6/ext/hpricot_scan/.gem.20150711-9155-1pwfg01
+installing default hpricot_scan libraries

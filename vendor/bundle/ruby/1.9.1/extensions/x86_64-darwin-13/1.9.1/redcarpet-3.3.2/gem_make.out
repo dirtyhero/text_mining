@@ -1,0 +1,56 @@
+/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/bin/ruby extconf.rb
+creating Makefile
+
+make  clean
+
+make
+compiling autolink.c
+couldn't understand kern.osversion `14.3.0'
+compiling buffer.c
+couldn't understand kern.osversion `14.3.0'
+buffer.c: In function ‘bufcstr’:
+buffer.c:104: warning: passing argument 1 of ‘bufgrow’ discards qualifiers from pointer target type
+compiling houdini_href_e.c
+couldn't understand kern.osversion `14.3.0'
+compiling houdini_html_e.c
+couldn't understand kern.osversion `14.3.0'
+compiling html.c
+couldn't understand kern.osversion `14.3.0'
+html.c: In function ‘rndr_blockcode’:
+html.c:128: warning: ‘cls’ is used uninitialized in this function
+compiling html_smartypants.c
+couldn't understand kern.osversion `14.3.0'
+html_smartypants.c: In function ‘squote_len’:
+html_smartypants.c:92: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c:92: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c:92: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c:92: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c: In function ‘smartypants_squote’:
+html_smartypants.c:133: warning: implicit conversion shortens 64-bit value into a 32-bit value
+html_smartypants.c:137: warning: comparison between signed and unsigned
+html_smartypants.c: In function ‘smartypants_cb__amp’:
+html_smartypants.c:238: warning: implicit conversion shortens 64-bit value into a 32-bit value
+html_smartypants.c:238: warning: ISO C90 forbids mixed declarations and code
+compiling markdown.c
+couldn't understand kern.osversion `14.3.0'
+markdown.c: In function ‘char_link’:
+markdown.c:1043: warning: ISO C90 forbids mixed declarations and code
+markdown.c:1083: warning: ISO C90 forbids mixed declarations and code
+markdown.c: In function ‘sd_markdown_render’:
+markdown.c:2816: warning: ISO C90 forbids mixed declarations and code
+markdown.c:2834: warning: passing argument 1 of ‘is_codefence’ discards qualifiers from pointer target type
+compiling rc_markdown.c
+couldn't understand kern.osversion `14.3.0'
+rc_markdown.c: In function ‘rb_redcarpet_md_render’:
+rc_markdown.c:125: warning: ISO C90 forbids mixed declarations and code
+compiling rc_render.c
+couldn't understand kern.osversion `14.3.0'
+compiling stack.c
+couldn't understand kern.osversion `14.3.0'
+linking shared-object redcarpet.bundle
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+
+make  install
+/usr/bin/install -c -m 0755 redcarpet.bundle /Users/kazuki/project/github/text_mining/vendor/bundle/ruby/1.9.1/gems/redcarpet-3.3.2/ext/redcarpet/.gem.20150711-9155-13lxdh6
+installing default redcarpet libraries

@@ -1,0 +1,27 @@
+/Users/kazuki/.rvm/rubies/ruby-1.9.3-p125/bin/ruby extconf.rb
+creating Makefile
+
+make  clean
+
+make
+compiling bcrypt_ext.c
+couldn't understand kern.osversion `14.3.0'
+bcrypt_ext.c: In function ‘bc_salt’:
+bcrypt_ext.c:17: warning: implicit conversion shortens 64-bit value into a 32-bit value
+compiling crypt.c
+couldn't understand kern.osversion `14.3.0'
+crypt.c: In function ‘crypt_salt’:
+crypt.c:15: warning: implicit conversion shortens 64-bit value into a 32-bit value
+compiling crypt_blowfish.c
+couldn't understand kern.osversion `14.3.0'
+compiling crypt_gensalt.c
+couldn't understand kern.osversion `14.3.0'
+compiling wrapper.c
+couldn't understand kern.osversion `14.3.0'
+linking shared-object bcrypt_ext.bundle
+couldn't understand kern.osversion `14.3.0'
+ld: warning: directory not found for option '-L/Users/kazuki/.rvm/usr/lib'
+
+make  install
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle /Users/kazuki/project/github/text_mining/vendor/bundle/ruby/1.9.1/gems/bcrypt-3.1.10/ext/mri/.gem.20150711-9155-1ayr3f5
+installing default bcrypt_ext libraries
