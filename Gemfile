@@ -39,7 +39,7 @@ gem 'therubyracer' # javascript runtime。lessをコンパイルするために�
 gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
 gem 'twitter-bootstrap-rails' # Bootstrapの本体
 # Use Mecab for ruby
-gem ‘natto’
+gem 'natto'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +54,14 @@ group :development, :test do
   gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
   gem 'pry-doc'    # methodを表示
   gem 'pry-stack_explorer' # スタックをたどれる
+
+  # deploy_config
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-rails'
+  gem 'rvm1-capistrano3', require: false
+  gem 'capistrano-bundler'
+  gem 'capistrano3-unicorn' # unicornを使っている場合のみ
+
 
 end
 
