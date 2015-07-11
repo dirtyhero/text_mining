@@ -39,7 +39,7 @@ gem 'therubyracer' # javascript runtime。lessをコンパイルするために�
 gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
 gem 'twitter-bootstrap-rails' # Bootstrapの本体
 # Use Mecab for ruby
-gem ‘natto’
+gem 'natto'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
