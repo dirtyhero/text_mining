@@ -40,4 +40,12 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.default_url_options = { :host => 'localhost:8080' }
 
+  config.to_prepare do
+    Devise::SessionsController.layout "devise"
+    Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "devise" }
+    Devise::ConfirmationsController.layout "devise"
+    Devise::UnlocksController.layout "devise"            
+    Devise::PasswordsController.layout "devise"        
+  end
+
 end
