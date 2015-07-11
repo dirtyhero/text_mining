@@ -33,7 +33,10 @@ gem 'devise'
 gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+gem 'capistrano'
+gem 'capistrano-rvm'
+gem 'capistrano3-unicorn' # unicornを使っている場合のみ
+
 
 gem 'therubyracer' # javascript runtime。lessをコンパイルするために必要
 gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
@@ -56,11 +59,9 @@ group :development, :test do
   gem 'pry-stack_explorer' # スタックをたどれる
 
   # deploy_config
-  gem 'capistrano'
-  gem 'capistrano-rails'
-  gem 'rvm1-capistrano3', require: false
-  gem 'capistrano-bundler'
-  gem 'capistrano3-unicorn' # unicornを使っている場合のみ
+  gem 'capistrano-rails',   '~> 1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'cap-ec2'
 
 
 end

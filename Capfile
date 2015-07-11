@@ -4,9 +4,8 @@ require 'capistrano/deploy'
 require 'capistrano/rails'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
-require 'rvm1/capistrano3'
 require 'capistrano/bundler'
 require 'capistrano3/unicorn'
-require 'whenever/capistrano'
+require 'capistrano/rvm'
 
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
