@@ -52,3 +52,11 @@ production:
   database: text_mining_production
   # username: text_mining
   # password: <%= ENV['TEXT_MINING_DATABASE_PASSWORD'] %>
+staging:
+  <<: *default
+  database: text_mining_staging
+  username: root
+  password: 
+  socket: /var/lib/mysql/mysql.sock
+  # username: text_mining
+  # password: <%= ENV['TEXT_MINING_DATABASE_PASSWORD'] %>
