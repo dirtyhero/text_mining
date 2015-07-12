@@ -15,7 +15,7 @@
   <h2>upload_result</h2>
     <ul>
     <%@file_upload_result.each do |f|%>
-      <li><%=f.upload_file_name%>　<%=f.created_at%></li>
+      <li><%=f.upload_file_name%>　<%=f.created_at.to_s.slice!(0..18)%></li>
     <% end -%>
     </ul>
 <% end -%>

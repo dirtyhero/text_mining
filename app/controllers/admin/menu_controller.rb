@@ -2,7 +2,7 @@ class Admin::MenuController < Admin::ApplicationController
   require 'csv'
 
   def index
-    @file_upload_result = FileUploadResult.limit(10)
+    @file_upload_result = FileUploadResult.limit(10).order("created_at DESC")
   end
 
   def import_csv
