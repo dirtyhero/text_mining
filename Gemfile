@@ -44,6 +44,8 @@ gem 'twitter-bootstrap-rails' # Bootstrapの本体
 # Use Mecab for ruby
 gem 'natto'
 
+gem 'chartkick'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   # gem 'debugger'

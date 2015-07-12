@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    resources :data_import
+    resources :data_import,:word_analysis
     
     resources :menu do
       collection do
