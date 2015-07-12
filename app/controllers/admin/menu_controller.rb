@@ -8,10 +8,14 @@ class Admin::MenuController < Admin::ApplicationController
   def import_csv
     p params
     p csv_file = params[:csv_file]
-    p csv_text = csv_file.read
+    p @csv_text = csv_file.read
     file = FileUploadResult.new(
       :upload_file_name=>csv_file.original_filename
     ).save!
+
+    # DBに書き込み
+    WordAnalysis.import(@csv_text)
+
 
     if file
       flash[:notice] = 'file_upload OK!!'
@@ -21,5 +25,5 @@ class Admin::MenuController < Admin::ApplicationController
       redirect_to action: 'index'
     end
   end
-  
+
 end
