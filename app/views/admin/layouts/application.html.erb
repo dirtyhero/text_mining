@@ -42,14 +42,26 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-9">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-      </div>
+        <div class="col-lg-3">
+          <div class="well sidebar-nav">
+            <h3>menu</h3>
+            <ul class="nav nav-list">
+              <li class="nav-header"><%= link_to "AdminTop", "/admin"  %></li>
+              <li class="nav-header">Graphic</li>
+              <li><%= link_to "GraphicLink1", "/admin/path2"  %></li>
+              <li><%= link_to "GraphicLink2", "/admin/path2"  %></li>
+              <li><%= link_to "GraphicLink3", "/admin/path3"  %></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
 
       <footer>
-        <p>&copy; TEAMOTA.inc 2015</p>
+        <p>&copy; Company 2015</p>
       </footer>
 
     </div> <!-- /container -->
