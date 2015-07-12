@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    resources :data_import
+    resources :menu,:data_import
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
