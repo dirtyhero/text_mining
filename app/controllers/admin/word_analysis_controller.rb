@@ -1,170 +1,55 @@
 class Admin::WordAnalysisController < Admin::ApplicationController
   require 'chartkick'
+  require 'Date'
   def index
-      chart_data = WordAnalysis.find_by_sql('select word,(count(id)) as counts from word_analyses WHERE answering_date = "2015-07-09" group by word order by counts desc')
-        @one = []
-        @two = []
-        @three = []
-        @four = []
-        @five = []
-        aaa = []
-        bbb = []
-        ccc = []
-        ddd = []
-        eee = []
-      chart_data.each_with_index do |words,index|
-        p words
-        p index
+    top5 = get_chart_top5
+    @one = []
+    @two = []
+    @three = []
+    @four = []
+    @five = []
+    # elemets = [@one,@two,@three,@four,@five]
+    # # [@one,@two,@three,@four,@five].map! do |chart_element|
+    # #   create_chart_data(top5[index])
+    # # end
+    # p top5
 
-        sql = "select (count(id)) as counts from word_analyses WHERE word = '"
-        sql += words.word
-        sql += "' and answering_date = '2015-07-09'"
-        p chart_count = WordAnalysis.find_by_sql(sql)
-        p '2015-07-09'
-        p chart_count[0].counts
-        aaa << '2015-07-09'
-        aaa << chart_count[0].counts
-        if index == 0
-          p 'if index == 0'
-          @one << aaa
-        elsif
-          index == 1
-          @two << aaa
-        elsif
-          index == 2
-          @three << aaa
-        elsif
-          index == 3
-          @four << aaa
-        elsif
-          index == 4
-          @five << aaa
-         end
-
-        sql = "select (count(id)) as counts from word_analyses WHERE word = '"
-        sql += words.word
-        sql += "' and answering_date = '2015-07-10'"
-        chart_count = WordAnalysis.find_by_sql(sql)
-        p '2015-07-10'
-        p chart_count[0].counts
-        bbb << '2015-07-10'
-        bbb << chart_count[0].counts
-        if index == 0
-          @one << bbb
-        elsif
-          index == 1
-          @two << bbb
-        elsif
-          index == 2
-          @three << bbb
-        elsif
-          index == 3
-          @four << bbb
-        elsif
-          index == 4
-          @five << bbb
-         end
-
-        sql = "select (count(id)) as counts from word_analyses WHERE word = '"
-        sql += words.word
-        sql += "' and answering_date = '2015-07-11'"
-        chart_count = WordAnalysis.find_by_sql(sql)
-        p '2015-07-11'
-        p chart_count[0].counts
-        ccc << '2015-07-11'
-        ccc << chart_count[0].counts
-        if index == 0
-          @one << ccc
-        elsif
-          index == 1
-          @two << ccc
-        elsif
-          index == 2
-          @three << ccc
-        elsif
-          index == 3
-          @four << ccc
-        elsif
-          index == 4
-          @five << ccc
-         end
-
-        sql = "select (count(id)) as counts from word_analyses WHERE word = '"
-        sql += words.word
-        sql += "' and answering_date = '2015-07-12'"
-        chart_count = WordAnalysis.find_by_sql(sql)
-        p '2015-07-12'
-        p chart_count[0].counts
-        ddd << '2015-07-12'
-        ddd << chart_count[0].counts
-        if index == 0
-          @one << ddd
-        elsif
-          index == 1
-          @two << ddd
-        elsif
-          index == 2
-          @three << ddd
-        elsif
-          index == 3
-          @four << ddd
-        elsif
-          index == 4
-          @five << ddd
-         end
-
-        sql = "select (count(id)) as counts from word_analyses WHERE word = '"
-        sql += words.word
-        sql += "' and answering_date = '2015-07-13'"
-        chart_count = WordAnalysis.find_by_sql(sql)
-        p '2015-07-13'
-        p chart_count[0].counts
-        eee << '2015-07-13'
-        eee << chart_count[0].counts
-        if index == 0
-          @one << eee
-        elsif
-          index == 1
-          @two << eee
-        elsif
-          index == 2
-          @three << eee
-        elsif
-          index == 3
-          @four << eee
-        elsif
-          index == 4
-          @five << eee
-         end
-
-        #p chart_count.counts
-
-        #sql = "select word,(count(id)) as counts from word_analyses WHERE answering_date = '"
-        #sql += chart_date.to_s
-        #sql += "' group by word"
-        #p chart_count = WordAnalysis.find_by_sql(sql)
-
-        #chart_date.each do |i|
-        #  p words.counts
-        #  p i.answering_date.to_s
-        #  #p = i + words.counts
-        #end
-
-         #WordAnalysis.find_by_sql(sql)
-     end
-   #end
-    p '@one'
-    p @one
-    p '@two'
-    p @two
-    p '@three'
-    p @three
-    p '@four'
-    p @four
-    p '@five'
-    p @five
+    # top5.each_with_index do |word,i|
+    #   p "sldkjflsdjflksjdlfkjslkdfjlsjf;alkjd;fja;lj"
+    #   elemets[i] << create_chart_data(word)
+    # end
+    # p "fuckoffffffff"
+    # p elements
     
     @chart_data = [['2014-04-01', 60], ['2014-04-02', 65], ['2014-04-03', 64]]
     @word_ranking = ['注文検索','シナリオ','重要項目設定','ヘルプセンター','レコメンド']
+  end
+  private
+
+  def get_chart_top5
+    # todo Date.todayに変更
+    return WordAnalysis.find_by_sql('select word,(count(id)) as counts from word_analyses WHERE answering_date = "2015-07-09" group by word order by counts desc limit 5')
+  end
+
+  def create_chart_data(word_analysis)
+    chart_data = []
+    [5,4,3,2,1].each do |num|
+      date = Date.today - num
+      sql = word_from_create_sql(word_analysis,date)
+      p "chart_countchart_countchart_countchart_countchart_countchart_count"
+      chart_count = WordAnalysis.find_by_sql(sql)
+
+
+      chart_data << [chart_count,date,chart_count.counts]
+    end
+    return chart_data
+  end
+
+  def word_from_create_sql(word,day)
+    # 日付と単語を渡してその日付とカウントを返す
+    sql = "select (count(id)) as counts,answering_date as date from word_analyses WHERE word = '"
+    sql += word.word.to_s
+    sql += "' and answering_date > '2015-07-01'"
+    return sql
   end
 end

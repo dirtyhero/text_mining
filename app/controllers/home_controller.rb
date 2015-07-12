@@ -5,6 +5,6 @@ class HomeController < ActionController::Base
   end
   private
   def go_to_admin
-    redirect_to controller: 'admin/data_import', action: 'index' if user_signed_in?
+    redirect_to controller: 'admin/menu', action: 'index' if user_signed_in?
   end
 end
