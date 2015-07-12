@@ -1,4 +1,4 @@
-class Admin::DataImportController < ActionController::Base
+class Admin::DataImportController < Admin::ApplicationController
   def index
   end
   
