@@ -13,10 +13,9 @@ class Admin::MenuController < Admin::ApplicationController
       :upload_file_name=>csv_file.original_filename
     ).save!
 
+    @u_id = current_user.id
     # DBに書き込み
-    WordAnalysis.import(@csv_text)
-
-
+    WordAnalysis.import(@csv_text,@u_id)
     if file
       flash[:notice] = 'file_upload OK!!'
       redirect_to action: 'index'

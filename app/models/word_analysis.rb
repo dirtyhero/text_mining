@@ -12,13 +12,15 @@ class WordAnalysis < ActiveRecord::Base
 
     # end
 
-#Admin::MenuControllerのcsv_text変数を持ってきます。インスタンス変数を直で突っ込むのがRailsのどっかのversionよりできないので、
+
+
+#Admin::MenuControllerのcsv_text,u_id変数を持ってきます。インスタンス変数を直で突っ込むのがRailsのどっかのversionよりできないので、
 #下記のような処理を入れています。
 csv_text = @csv_text
-
+u_id = @u_id
 
 #fileアップロードmethod
-def import(csv_text)
+def import(csv_text,u_id)
 
 
  CSV.parse(csv_text) do |data|
@@ -35,6 +37,7 @@ def import(csv_text)
       wa.word = n.surface
       wa.part = n.feature.split(",")[0]
       wa.deleted = 0
+      wa.user_id = u_id
       wa.save!
     end
    end
