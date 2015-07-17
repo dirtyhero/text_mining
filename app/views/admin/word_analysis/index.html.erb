@@ -5,15 +5,13 @@
 <h1>rank</h1>
 <table>
   <tbody>
-    <% @word_ranking.each.with_index do |word,index| %>
-      <tr>
-         <h5><%= index + 1 %>位</h5>
-         <h5>「<%= word %>」</h5>
-         <%= line_chart @chart_data, height: "100px",width: "100px" %>
-         <br>
+      <% @top5.each.with_index do |word,index| %>
+        <tr>
+           <h5><%= index + 1 %>位「<%= word[0] %>」</h5>
+        </tr>
       <% end %>
-    </tr>
     <br>
+    <%= high_chart("sample", @graph) %>
   </tbody>
 </table>
 <br>

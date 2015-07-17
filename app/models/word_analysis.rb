@@ -34,7 +34,7 @@ class WordAnalysis < ActiveRecord::Base
       self.limit(5).group('word').order('count_id desc').count('id')
     end
     def word_from_chart_date(word)
-      self.where('word = ?', word[0]).group('answering_date').order('answering_date desc').count('id').to_a
+      self.where('word = ?', word[0]).group('answering_date').order('answering_date').count('id').to_a
     end
 
   end # self end
