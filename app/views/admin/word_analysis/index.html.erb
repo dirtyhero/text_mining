@@ -2,15 +2,20 @@
 <p id="notice"><%= notice %></p>
 <%= javascript_include_tag '//www.google.com/jsapi', 'chartkick' %>
 </head>
-<h1>rank</h1>
+<h1>Rank</h1>
 <table>
   <tbody>
       <% @top5.each.with_index do |word,index| %>
         <tr>
-           <h5><%= index + 1 %>位「<%= word[0] %>」</h5>
+           <h5><%= index + 1 %>位「<%= link_to "#{word[0]}", controller: "/admin/word_analysis", action: "index", word: "#{word[0]}" %>」</h5>
         </tr>
       <% end %>
     <br>
+  </tbody>
+</table>
+<h1>Graphic</h1>
+<table>
+  <tbody>
     <%= high_chart("sample", @graph) %>
   </tbody>
 </table>
