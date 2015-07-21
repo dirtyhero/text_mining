@@ -31,7 +31,7 @@ class WordAnalysis < ActiveRecord::Base
       end
     end
     def get_chart_top5(date=nil)
-      self.limit(5).group('word').order('count_id desc').count('id')
+      self.where('part = ?', '名詞').limit(5).group('word').order('count_id desc').count('id')
     end
     def word_from_chart_date(word)
       self.where('word = ?', word).group('answering_date').order('answering_date').count('id').to_a
